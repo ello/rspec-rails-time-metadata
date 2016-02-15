@@ -1,5 +1,8 @@
 # rspec-rails-time-metadata
 
+[![Gem Version](https://badge.fury.io/rb/rspec-rails-time-metadata.svg)](https://badge.fury.io/rb/rspec-rails-time-metadata)
+[![Build Status](https://travis-ci.org/ello/rspec-rails-time-metadata.svg?branch=master)](https://travis-ci.org/ello/rspec-rails-time-metadata)
+
 This gem is a quick shim to use the Rails 4.1+ time helpers in your RSpec
 examples.
 
