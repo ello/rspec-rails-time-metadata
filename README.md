@@ -1,28 +1,32 @@
-# Rspec::Rails::Time::Metadata
+# rspec-rails-time-metadata
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rspec/rails/time/metadata`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem is a quick shim to use the Rails 4.1+ time helpers in your RSpec
+examples.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's Gemfile (in the test group, preferably after
+`rspec-rails`):
 
 ```ruby
-gem 'rspec-rails-time-metadata'
+gem 'rspec-rails-time-metadata', group: :test
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install rspec-rails-time-metadata
-
 ## Usage
 
-TODO: Write usage instructions here
+The gem provides you two conveniences:
+
+One is the ability to use all of the [Rails time helpers](http://api.rubyonrails.org/classes/ActiveSupport/Testing/TimeHelpers.html) (`travel`, `travel_to`,
+`travel_back`) directly in your RSpec examples.
+
+The second is the ability to use (what I've found to be) the most common
+scenario, freezing time for the duration of a single example, by just applying
+the `freeze_time` metadata tag to the specific example you care about. A good
+example of this in use [may be found in the specs for the gem itself](https://github.com/ello/rspec-rails-time-metadata/blob/master/spec/rspec/rails/time/metadata_spec.rb)
 
 ## Development
 
